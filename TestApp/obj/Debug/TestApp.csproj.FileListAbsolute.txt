@@ -1,0 +1,15 @@
+D:\HandySportFeed\TestApp\bin\Debug\TestApp.exe.config
+D:\HandySportFeed\TestApp\bin\Debug\TestApp.exe
+D:\HandySportFeed\TestApp\bin\Debug\TestApp.pdb
+D:\HandySportFeed\TestApp\bin\Debug\HandySportFeed.Domain.dll
+D:\HandySportFeed\TestApp\bin\Debug\DapperExtensions.dll
+D:\HandySportFeed\TestApp\bin\Debug\Ninject.dll
+D:\HandySportFeed\TestApp\bin\Debug\Dapper.dll
+D:\HandySportFeed\TestApp\bin\Debug\HandySportFeed.Domain.pdb
+D:\HandySportFeed\TestApp\bin\Debug\DapperExtensions.pdb
+D:\HandySportFeed\TestApp\bin\Debug\Ninject.xml
+D:\HandySportFeed\TestApp\bin\Debug\Dapper.pdb
+D:\HandySportFeed\TestApp\bin\Debug\Dapper.xml
+D:\HandySportFeed\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+D:\HandySportFeed\TestApp\obj\Debug\TestApp.exe
+D:\HandySportFeed\TestApp\obj\Debug\TestApp.pdb
