@@ -9,6 +9,8 @@ namespace HandySportFeed.Domain
         public override void Load()
         {
             Bind<ITestEntitieRepository>().To<TestEntitieRepository>();
+            Bind<ICommandRepository>().To<CommandRepository>();
+            Bind<IMatchRepository>().To<MatchRepository>();
         }
     }
 }

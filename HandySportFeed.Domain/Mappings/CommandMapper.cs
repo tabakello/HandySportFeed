@@ -3,12 +3,11 @@ using HandySportFeed.Domain.Model;
 
 namespace HandySportFeed.Domain.Mappings
 {
-    sealed class TestEntitieMapper : ClassMapper<TestEntitie>
+    public sealed class CommandMapper : ClassMapper<Command>
     {
-        public TestEntitieMapper()
+        public CommandMapper()
         {
-            Table("TestEntitie");
-            Map(p => p.Id).Ignore();
+            Table("Command");
             AutoMap();
         }
     }
