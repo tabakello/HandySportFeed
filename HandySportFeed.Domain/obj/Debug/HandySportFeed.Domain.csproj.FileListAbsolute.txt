@@ -10,3 +10,15 @@ D:\HandySportFeed\HandySportFeed.Domain\bin\Debug\Ninject.xml
 D:\HandySportFeed\HandySportFeed.Domain\obj\Debug\HandySportFeed.Domain.csprojResolveAssemblyReference.cache
 D:\HandySportFeed\HandySportFeed.Domain\obj\Debug\HandySportFeed.Domain.dll
 D:\HandySportFeed\HandySportFeed.Domain\obj\Debug\HandySportFeed.Domain.pdb
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\HandySportFeed.Domain.dll
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\HandySportFeed.Domain.pdb
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\Dapper.dll
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\DapperExtensions.dll
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\Ninject.dll
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\Dapper.pdb
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\Dapper.xml
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\DapperExtensions.pdb
+d:\Handy\HandySportFeed\HandySportFeed.Domain\bin\Debug\Ninject.xml
+d:\Handy\HandySportFeed\HandySportFeed.Domain\obj\Debug\HandySportFeed.Domain.csprojResolveAssemblyReference.cache
+d:\Handy\HandySportFeed\HandySportFeed.Domain\obj\Debug\HandySportFeed.Domain.dll
+d:\Handy\HandySportFeed\HandySportFeed.Domain\obj\Debug\HandySportFeed.Domain.pdb
