@@ -7,7 +7,7 @@ namespace TestApp
     {
         static void Main()
         {
-            var a = RepositoryFactory.GetRepository<ITestEntitieRepository>().FindAll();
+            var a = RepositoryFactory.GetRepository<IMatchRepository>().FindById(1);
         }
     }
 }
