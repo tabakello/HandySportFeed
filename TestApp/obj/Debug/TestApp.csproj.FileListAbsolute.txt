@@ -28,3 +28,5 @@ d:\Handy\HandySportFeed\TestApp\bin\Debug\Dapper.xml
 d:\Handy\HandySportFeed\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
 d:\Handy\HandySportFeed\TestApp\obj\Debug\TestApp.exe
 d:\Handy\HandySportFeed\TestApp\obj\Debug\TestApp.pdb
+d:\HandySportFeed\TestApp\bin\Debug\HandySportFeed.Parsers.dll
+d:\HandySportFeed\TestApp\bin\Debug\HandySportFeed.Parsers.pdb

@@ -48,7 +48,6 @@ namespace HandySportFeed.Domain.Repositories
 
         public override Match FindById(int id)
         {
-            
             Match match;
             using (var cn = Connection)
             {

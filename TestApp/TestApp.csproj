@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,12 +46,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HandySportFeed.Domain\HandySportFeed.Domain.csproj">
       <Project>{968b3972-ceda-4cae-873a-47a2b87303d4}</Project>
       <Name>HandySportFeed.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandySportFeed.Parser\HandySportFeed.Parsers.csproj">
+      <Project>{a53b6ab8-aa82-4265-a548-c367f9cf9e4e}</Project>
+      <Name>HandySportFeed.Parsers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
