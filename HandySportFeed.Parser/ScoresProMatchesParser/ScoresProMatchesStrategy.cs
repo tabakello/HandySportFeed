@@ -11,16 +11,17 @@ namespace HandySportFeed.Parsers.ScoresProMatchesParser
     {
         public IEnumerable<Match> Parse()
         {
+            //получаем xml
             var xDoc = new XmlDocument();
             xDoc.LoadXml(XmlHelper.GetXmlStringByUrl(ConfigurationManager.AppSettings["ScoreProUrl"]));
-
+            //достали матчи
             var listXmlMathces = xDoc.GetElementsByTagName("item");
 
             if (listXmlMathces.Count == 0)
                 throw new Exception("Alarm");
-
+            //разделили мух от катлет
             var scoreProMatches = ParseXmlMatches(listXmlMathces);
-
+            //распарсили
             return ParseScoreProMathes(scoreProMatches);
         }
 
@@ -49,7 +50,7 @@ namespace HandySportFeed.Parsers.ScoresProMatchesParser
 
         private IEnumerable<Match> ParseScoreProMathes(IEnumerable<ScoreProMatch> scoreProMatches)
         {
-            
+            var matchList = new List<Match>();
             foreach (var scoreProMatch in scoreProMatches)
             {
                 var values = scoreProMatch.Title.Split(new[] {':'});
@@ -57,15 +58,16 @@ namespace HandySportFeed.Parsers.ScoresProMatchesParser
                 var commands = values[1].Substring(values[1].IndexOf(')') + 1);
                 var homeCommand = commands.Substring(0, commands.IndexOf(" vs ", StringComparison.Ordinal)).Trim();
                 var awayCommand = commands.Substring(commands.IndexOf(" vs ", StringComparison.Ordinal) + 3).Trim();
-                var scoreHomeCommand = values[2].Trim().Split(new[] {'-'})[0];
-                var scoreAwayCommand = values[2].Trim().Split(new[] { '-' })[1];
+                var scoreHomeCommand = int.Parse(values[2].Trim().Split(new[] { '-' })[0]);
+                var scoreAwayCommand = int.Parse(values[2].Trim().Split(new[] { '-' })[1]);
+                matchList.Add(new Match
+                {
+                    ScoreAway = scoreAwayCommand,
+                    ScoreHome = scoreHomeCommand,
+                    //HomeCommand = Commands.Where(p => p.Name == "homeCommand")
+                });
             }
-
-            return new List<Match>
-            {
-                new Match { AwayCommand = new Command { Id = 1, NameEn = "Sevastopol" } },
-                new Match { AwayCommand = new Command { Id = 1, NameEn = "Simferopol" } }
-            };
+            return matchList;
         }
     }
 }
