@@ -1,7 +1,5 @@
-﻿namespace HandySportFeed.Domain.Model
-{
-    public class EntityBase
-    {
+﻿namespace HandySportFeed.Domain.Model {
+    public class EntityBase {
         public int Id { get; set; }
     }
 }
