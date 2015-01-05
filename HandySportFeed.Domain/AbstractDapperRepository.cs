@@ -1,41 +1,27 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using Dapper;
 using DapperExtensions;
 using HandySportFeed.Domain.Model;
-using System.Configuration;
 
-namespace HandySportFeed.Domain
-{
-    public abstract class AbstractDapperRepository<T> : IRepository<T> where T : EntityBase
-    {
-        protected readonly string TableName;
-        private readonly string _connectionStringName;
+namespace HandySportFeed.Domain {
+    public abstract class AbstractDapperRepository<T> : IRepository<T> where T : EntityBase {
+        private readonly string tableName;
+        private readonly string connectionStringName;
 
-        internal IDbConnection Connection
-        {
-            get
-            {
-                return new SqlConnection(ConfigurationManager.ConnectionStrings[_connectionStringName].ConnectionString);
-            }
+        protected AbstractDapperRepository(string tableName, string connectionStringName) {
+            this.tableName = tableName;
+            this.connectionStringName = connectionStringName;
         }
 
-        protected AbstractDapperRepository(string tableName, string connectionStringName)
-        {
-            TableName = tableName;
-            _connectionStringName = connectionStringName;
+        internal IDbConnection Connection {
+            get { return new SqlConnection(ConfigurationManager.ConnectionStrings[connectionStringName].ConnectionString); }
         }
 
-        internal virtual dynamic Mapping(T item)
-        {
-            return item;
-        }
-
-        public virtual object Add(T item)
-        {
-            using (var cn = Connection)
-            {
+        public virtual object Add(T item) {
+            using (var cn = Connection) {
                 cn.Open();
                 var t = cn.Insert(item);
                 cn.Close();
@@ -43,32 +29,26 @@ namespace HandySportFeed.Domain
             }
         }
 
-        public virtual void Update(T item)
-        {
-            using (var cn = Connection)
-            {
+        public virtual void Update(T item) {
+            using (var cn = Connection) {
                 cn.Open();
                 cn.Update(item);
                 cn.Close();
             }
         }
 
-        public virtual void Remove(T item)
-        {
-            using (var cn = Connection)
-            {
+        public virtual void Remove(T item) {
+            using (var cn = Connection) {
                 cn.Open();
-                cn.Execute("DELETE FROM " + TableName + " WHERE ID=@ID", new { ID = item.Id });
+                cn.Execute("DELETE FROM " + tableName + " WHERE ID=@ID", new { ID = item.Id });
                 cn.Close();
             }
         }
 
-        public virtual T FindById(int id)
-        {
+        public virtual T FindById(int id) {
             T item;
 
-            using (var cn = Connection)
-            {
+            using (var cn = Connection) {
                 cn.Open();
                 item = cn.Get<T>(id);
                 cn.Close();
@@ -77,19 +57,20 @@ namespace HandySportFeed.Domain
             return item;
         }
 
-        IEnumerable<T> IRepository<T>.FindAll()
-        {
+        IEnumerable<T> IRepository<T>.FindAll() {
             return FindAll();
         }
 
-        public virtual IEnumerable<T> FindAll()
-        {
+        internal virtual dynamic Mapping(T item) {
+            return item;
+        }
+
+        public virtual IEnumerable<T> FindAll() {
             IEnumerable<T> items;
 
-            using (IDbConnection cn = Connection)
-            {
+            using (var cn = Connection) {
                 cn.Open();
-                items = cn.Query<T>("SELECT * FROM " + TableName);
+                items = cn.Query<T>("SELECT * FROM " + tableName);
                 cn.Close();
             }
 

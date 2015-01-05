@@ -1,7 +1,5 @@
-﻿namespace HandySportFeed.Domain.Model
-{
-    public class Match : EntityBase
-    {
+﻿namespace HandySportFeed.Domain.Model {
+    public class Match : EntityBase {
         public int TourneyId { get; set; }
         public System.DateTime Date { get; set; }
         public string Tour { get; set; }

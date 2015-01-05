@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.Domain", "Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.Parsers", "HandySportFeed.Parser\HandySportFeed.Parsers.csproj", "{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.Tests", "HandySportFeed.Tests\HandySportFeed.Tests.csproj", "{A425EC23-2966-403F-AD03-3FC53C8450B8}"
+EndProject
+>>>>>>> 16b4f5a41b074ff196bc7ff6212dbc2303a6af71
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,13 @@ Global
 		{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 16b4f5a41b074ff196bc7ff6212dbc2303a6af71
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
