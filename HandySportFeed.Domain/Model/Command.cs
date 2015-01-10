@@ -6,5 +6,8 @@
         public int? Rate { get; set; }
         public bool Actual { get; set; }
         public string LogoUrl { get; set; }
+        public string ScoreProName { get; set; }
+
+        public Tourney Tourney { get; set; }
     }
 }

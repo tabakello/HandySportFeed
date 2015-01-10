@@ -3,6 +3,6 @@ using HandySportFeed.Domain.Model;
 
 namespace HandySportFeed.Parsers {
     public interface IMatchesParserStrategy {
-        IEnumerable<Match> Parse();
+        IEnumerable<Match> Parse(string url);
     }
 }

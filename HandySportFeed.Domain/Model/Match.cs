@@ -12,5 +12,7 @@
 
         public Command HomeCommand { get; set; }
         public Command AwayCommand { get; set; }
+        public Tourney Tourney { get; set; }
+        public Country Country { get; set; }
     }
 }

@@ -2,15 +2,15 @@
 using HandySportFeed.Domain.Model;
 
 namespace HandySportFeed.Parsers {
-    public abstract class MatchesParser {
+    public class MatchesParser {
         private readonly IMatchesParserStrategy parseStrategy;
 
-        protected MatchesParser(IMatchesParserStrategy parseStrategy) {
+        public MatchesParser(IMatchesParserStrategy parseStrategy) {
             this.parseStrategy = parseStrategy;
         }
 
-        public IEnumerable<Match> Parse() {
-            return parseStrategy.Parse();
+        public IEnumerable<Match> Parse(string url) {
+            return parseStrategy.Parse(url);
         }
     }
 }

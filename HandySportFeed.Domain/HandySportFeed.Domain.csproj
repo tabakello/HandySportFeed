@@ -51,21 +51,19 @@
   <ItemGroup>
     <Compile Include="Interfaces\ICommandRepository.cs" />
     <Compile Include="Interfaces\IMatchRepository.cs" />
-    <Compile Include="Interfaces\ITestEntitieRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Mappings\CommandMapper.cs" />
     <Compile Include="Mappings\MatchMapper.cs" />
-    <Compile Include="Mappings\TestEntitieMapper.cs" />
     <Compile Include="Model\Command.cs" />
+    <Compile Include="Model\Country.cs" />
     <Compile Include="Model\EntityBase.cs" />
     <Compile Include="Model\Match.cs" />
-    <Compile Include="Model\TestEntitie.cs" />
+    <Compile Include="Model\Result.cs" />
     <Compile Include="Model\Tourney.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AbstractDapperRepository.cs" />
     <Compile Include="Repositories\CommandRepository.cs" />
     <Compile Include="Repositories\MatchRepository.cs" />
-    <Compile Include="Repositories\TestEntitieRepository.cs" />
     <Compile Include="RepositoryNinjectModule.cs" />
   </ItemGroup>
   <ItemGroup />
