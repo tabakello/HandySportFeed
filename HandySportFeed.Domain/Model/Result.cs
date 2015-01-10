@@ -1,5 +1,5 @@
 ﻿namespace HandySportFeed.Domain.Model {
-    public class TestEntitie : EntityBase {
+    public class Result : EntityBase {
         public string Name { get; set; }
     }
 }
