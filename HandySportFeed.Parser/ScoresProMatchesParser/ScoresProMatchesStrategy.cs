@@ -9,7 +9,7 @@ namespace HandySportFeed.Parsers.ScoresProMatchesParser
 {
     public class ScoresProMatchesStrategy : IMatchesParserStrategy
     {
-        public IEnumerable<Match> Parse(string url)
+        public IEnumerable<Match> Parse(string url,DateTime date)
         {
             var xDoc = new XmlDocument();
             xDoc.LoadXml(XmlHelper.GetXmlStringByUrl(url));

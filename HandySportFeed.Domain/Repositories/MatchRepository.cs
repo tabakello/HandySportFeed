@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Dapper;
 using HandySportFeed.Domain.Interfaces;
@@ -10,8 +11,8 @@ namespace HandySportFeed.Domain.Repositories {
         public MatchRepository()
             : base("Match", "TestDB") { }
 
-        public IEnumerable<Match> GetMathesBySeason(int seasonId) {
-            IEnumerable<Match> matches;
+        public List<Match> GetMathesBySeason(int seasonId) {
+            List<Match> matches;
             using (var cn = Connection) {
                 cn.Open();
                 const string sql = @"select m.*, cH.*, cA.* from Match m  
@@ -22,7 +23,7 @@ namespace HandySportFeed.Domain.Repositories {
                     match.HomeCommand = commandH;
                     match.AwayCommand = commandA;
                     return match;
-                }, new { seasonId });
+                }, new { seasonId }).ToList();
                 cn.Close();
             }
             return matches;
@@ -49,9 +50,9 @@ namespace HandySportFeed.Domain.Repositories {
             return match;
         }
 
-        public IEnumerable<Match> GetMathesByLiveScoreCommandsName(string homeCommandName, string awayCommandName)
+        public List<Match> GetMathesByLiveScoreCommandsName(string homeCommandName, string awayCommandName)
         {
-            IEnumerable<Match> matches;
+            List<Match> matches;
             using (var cn = Connection)
             {
                 cn.Open();
@@ -64,10 +65,27 @@ namespace HandySportFeed.Domain.Repositories {
                     match.HomeCommand = commandH;
                     match.AwayCommand = commandA;
                     return match;
-                }, new { homeCommandName, awayCommandName });
+                }, new { homeCommandName, awayCommandName }).ToList();
                 cn.Close();
             }
             return matches;
+        }
+
+
+        public List<Match> GetMatchesByDate(DateTime date)
+        {
+            List<Match> tourney;
+            using (var cn = Connection)
+            {
+                cn.Open();
+                const string sql = @"SELECT * FROM Match where date >= @startDate and date <= @endDate";
+                tourney = cn.Query<Match>(sql, new {
+                    startDate = date.Date + new TimeSpan(0, 0, 0),
+                    endDate = date.Date + new TimeSpan(23, 59, 59)
+                }).ToList();
+                cn.Close();
+            }
+            return tourney;
         }
     }
 }

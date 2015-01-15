@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HandySportFeed.Domain.Model;
 
 namespace HandySportFeed.Parsers {
@@ -9,8 +10,8 @@ namespace HandySportFeed.Parsers {
             this.parseStrategy = parseStrategy;
         }
 
-        public IEnumerable<Match> Parse(string url) {
-            return parseStrategy.Parse(url);
+        public IEnumerable<Match> Parse(string url, DateTime date) {
+            return parseStrategy.Parse(url, date);
         }
     }
 }

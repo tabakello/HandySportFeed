@@ -10,10 +10,12 @@
         public int SeasonId { get; set; }
         public int ResultId { get; set; }
         public int MatchStatusId { get; set; }
+        public string LiveMinute { get; set; }
 
         public Command HomeCommand { get; set; }
         public Command AwayCommand { get; set; }
         public Tourney Tourney { get; set; }
         public Country Country { get; set; }
+        public MatchStatus MatchStatus { get; set; }
     }
 }

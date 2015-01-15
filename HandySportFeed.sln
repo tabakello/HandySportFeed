@@ -1,17 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.Domain", "HandySportFeed.Domain\HandySportFeed.Domain.csproj", "{968B3972-CEDA-4CAE-873A-47A2B87303D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.Parsers", "HandySportFeed.Parser\HandySportFeed.Parsers.csproj", "{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}"
 EndProject
-<<<<<<< HEAD
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.Tests", "HandySportFeed.Tests\HandySportFeed.Tests.csproj", "{A425EC23-2966-403F-AD03-3FC53C8450B8}"
 EndProject
->>>>>>> 16b4f5a41b074ff196bc7ff6212dbc2303a6af71
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "C:\Users\Александр\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.csproj", "{F207EA76-827F-4248-8E2F-60BDAA6E22E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandySportFeed.WinService", "HandySportFeed.WinService\HandySportFeed.WinService.csproj", "{615E792F-48AF-4918-B31D-FD066F6EB259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,13 +27,18 @@ Global
 		{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A53B6AB8-AA82-4265-A548-C367F9CF9E4E}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-=======
 		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A425EC23-2966-403F-AD03-3FC53C8450B8}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 16b4f5a41b074ff196bc7ff6212dbc2303a6af71
+		{F207EA76-827F-4248-8E2F-60BDAA6E22E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F207EA76-827F-4248-8E2F-60BDAA6E22E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F207EA76-827F-4248-8E2F-60BDAA6E22E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F207EA76-827F-4248-8E2F-60BDAA6E22E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615E792F-48AF-4918-B31D-FD066F6EB259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615E792F-48AF-4918-B31D-FD066F6EB259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615E792F-48AF-4918-B31D-FD066F6EB259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615E792F-48AF-4918-B31D-FD066F6EB259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
